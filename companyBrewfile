@@ -1,0 +1,33 @@
+tap "buo/cask-upgrade"
+tap "hashicorp/tap"
+
+brew "git"
+brew "postgresql"
+brew "tilt"
+brew "hashicorp/tap/terraform"
+cask "visual-studio-code"
+brew "docker"
+
+# Necessary for using the AWS CLI tools
+brew "python@3.13"
+brew "python-setuptools"
+brew "aws2-wrap"
+brew "awscli"
+cask "session-manager-plugin"
+
+# Necessary for some genisys dependencies
+brew "pkgconf"
+brew "pixman"
+brew "cairo"
+brew "pango"
+
+# Compliance agent
+cask "drata-agent"
+
+# Team collaboration tools
+cask "1password"
+cask "drata-agent"
+cask "linear-linear"
+cask "slack"
+cask "zoom"
+cask "discord"

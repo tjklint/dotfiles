@@ -14,3 +14,7 @@ for file in "$ZSH_CONFIG_DIR"/*.zsh; do
 done
 
 macchina
+
+# zoxide (smart cd) — must be last so all PATH/hook mutations are done.
+eval "$(zoxide init zsh)"
+alias cd="z"

@@ -14,9 +14,7 @@ alias la="eza -lha"
 # ripgrep (search)
 alias rg="ripgrep"
 
-# zoxide (smart cd)
-eval "$(zoxide init zsh)"
-alias cd="z"
+# zoxide is initialized at the end of ../.zshrc (it must be last)
 
 # tmux
 alias t="tmux attach || tmux new -s main"

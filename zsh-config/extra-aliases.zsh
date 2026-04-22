@@ -30,14 +30,6 @@ alias psg="ps aux | grep -v grep | grep -i"
 # Network
 alias ping="ping -c 5"
 alias ports="lsof -i -P -n | grep LISTEN"
-destory() {
-  if [ -z "$1" ]; then
-    echo "Usage: destory <port>"
-    return 1
-  fi
-  lsof -ti :$1 | xargs kill -9
-}
-
 # macOS specific (if on macOS)
 if [[ "$OSTYPE" == "darwin"* ]]; then
   alias showfiles="defaults write com.apple.finder AppleShowAllFiles YES && killall Finder"

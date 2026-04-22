@@ -1,3 +1,12 @@
+# Count lines of code across all git-tracked files in the current repo.
+loc() {
+  if ! git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
+    echo "loc: not inside a git repository" >&2
+    return 1
+  fi
+  git ls-files -z | xargs -0 wc -l
+}
+
 # === Cursor AI Toggle Commands (No Comments, jq-Safe) ===
 
 cursorify() {

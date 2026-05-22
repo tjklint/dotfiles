@@ -2,7 +2,7 @@
 # Sources modular configuration files from zsh-config/ in a deliberate order:
 # oh-my-zsh first so our aliases/functions can override its defaults.
 
-ZSH_CONFIG_DIR="$(cd "$(dirname "${(%):-%x}")" && pwd)/zsh-config"
+ZSH_CONFIG_DIR="$HOME/dotfiles/zsh-config"
 
 # 1. Oh My Zsh (must load before aliases so our aliases win)
 source "$ZSH_CONFIG_DIR/oh-my-zsh.zsh"

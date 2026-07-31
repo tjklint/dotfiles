@@ -156,6 +156,9 @@ install_gh() {
 link_configs() {
   echo "🔗 Linking config files..."
 
+  # zsh
+  ln -sfn "$HOME/dotfiles/.zshrc" "$HOME/.zshrc"
+
   # Ghostty
   mkdir -p "$HOME/.config/ghostty"
   ln -sfn "$HOME/dotfiles/config.ghostty" "$HOME/.config/ghostty/config.ghostty"

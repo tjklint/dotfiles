@@ -9,3 +9,6 @@ notify-on-command-finish-after = 15s
 
 # Always show the tab bar so open tabs are never a surprise.
 window-show-tab-bar = always
+
+# GTK builds only: tabs fill their available space.
+gtk-wide-tabs = true

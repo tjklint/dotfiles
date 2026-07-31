@@ -4,14 +4,14 @@
   "logo": {
     "type": "auto",
     "color": {
-      "1": "#ff2a6d",
-      "2": "#05d9e8",
-      "3": "#f8008a",
-      "4": "#d7fc70",
-      "5": "#ff2a6d",
-      "6": "#05d9e8",
-      "7": "#7928ca",
-      "8": "#e0e0e0"
+      "1": "#ff6482",
+      "2": "#36f9f6",
+      "3": "#f97e72",
+      "4": "#7a5aaa",
+      "5": "#ff6482",
+      "6": "#36f9f6",
+      "7": "#7a5aaa",
+      "8": "#f2f2f2"
     },
     "padding": {
       "top": 0,
@@ -29,10 +29,10 @@
     "pipe": true,
     "showErrors": false,
     "color": {
-      "keys": "#05d9e8",
-      "title": "#ff2a6d",
+      "keys": "#ff6482",
+      "title": "#36f9f6",
       "output": "",
-      "separator": "#7928ca"
+      "separator": "#7a5aaa"
     },
     "brightColor": true,
     "bar": {
@@ -46,8 +46,8 @@
       },
       "color": {
         "elapsed": "auto",
-        "total": "#7928ca",
-        "border": "#7928ca"
+        "total": "#7a5aaa",
+        "border": "#7a5aaa"
       },
       "width": 10
     }
@@ -59,9 +59,9 @@
       "key": " ",
       "fqdn": false,
       "color": {
-        "user": "#ff2a6d",
-        "at": "#05d9e8",
-        "host": "#d7fc70"
+        "user": "#ff6482",
+        "at": "#36f9f6",
+        "host": "#f97e72"
       }
     },
     {

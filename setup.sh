@@ -153,6 +153,18 @@ install_gh() {
   fi
 }
 
+# Link config files into place
+link_configs() {
+  echo "🔗 Linking config files..."
+
+  # Ghostty
+  mkdir -p "$HOME/.config/ghostty"
+  ln -sfn "$HOME/dotfiles/config.ghostty" "$HOME/.config/ghostty/config.ghostty"
+  ln -sfn "$HOME/dotfiles/tabs.css" "$HOME/.config/ghostty/tabs.css"
+
+  echo "✓ Config files linked"
+}
+
 # Run installations
 install_packages
 install_nvm
@@ -161,6 +173,7 @@ install_omz
 install_zoxide
 install_macchina
 install_gh
+link_configs
 
 echo ""
 echo "✨ Setup complete!"

@@ -26,7 +26,7 @@
 
   "display": {
     "separator": ": ",
-    "pipe": true,
+    "pipe": false,
     "showErrors": false,
     "color": {
       "keys": "#ff6482",

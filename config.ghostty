@@ -1,6 +1,9 @@
 # Ghostty terminal config
 # Shared across machines. Linked into ~/.config/ghostty/config.ghostty by setup.sh.
 
+# Cyberpunk vibes. Swap for Synthwave, Cobalt Neon, Laser, etc.
+theme = Cyberpunk
+
 # Notify when a command finishes, but only when the terminal is unfocused.
 # Long-running commands are the whole reason to glance back at a terminal.
 notify-on-command-finish = unfocused

@@ -3,6 +3,8 @@ set -e
 
 echo "🚀 Setting up dotfiles environment..."
 
+DOTFILES_DIR="${DOTFILES_DIR:-$HOME/dotfiles}"
+
 # Detect OS and package manager
 detect_package_manager() {
   if command -v pacman &> /dev/null; then
@@ -35,7 +37,7 @@ install_packages() {
       sudo pacman -Syu --noconfirm
       sudo pacman -S --noconfirm \
         git code ghostty \
-        nvm pnpm tmux \
+        pnpm tmux \
         fzf ripgrep jq eza bat qrencode lsof
       ;;
     brew)
@@ -50,16 +52,22 @@ install_packages() {
       echo "Installing packages via apt..."
       sudo apt update
       sudo apt install -y \
-        git code ghostty \
-        nodejs npm tmux \
+        git nodejs npm tmux \
         fzf ripgrep jq eza bat qrencode lsof gh
+      echo ""
+      echo "⚠️  code and ghostty aren't in default apt repos; install them manually:"
+      echo "   VS Code:  https://code.visualstudio.com/docs/setup/linux"
+      echo "   Ghostty:  https://ghostty.org/docs/install"
       ;;
     dnf)
       echo "Installing packages via dnf..."
       sudo dnf install -y \
-        git code ghostty \
-        nodejs npm tmux \
+        git nodejs npm tmux \
         fzf ripgrep jq eza bat qrencode lsof gh
+      echo ""
+      echo "⚠️  code and ghostty aren't in default dnf repos; install them manually:"
+      echo "   VS Code:  https://code.visualstudio.com/docs/setup/linux"
+      echo "   Ghostty:  https://ghostty.org/docs/install"
       ;;
   esac
 }
@@ -178,23 +186,23 @@ link_configs() {
   echo "🔗 Linking config files..."
 
   # zsh
-  ln -sfn "$HOME/dotfiles/.zshrc" "$HOME/.zshrc"
+  ln -sfn "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc"
 
   # git
-  ln -sfn "$HOME/dotfiles/.gitconfig" "$HOME/.gitconfig"
+  ln -sfn "$DOTFILES_DIR/.gitconfig" "$HOME/.gitconfig"
 
   # opencode
   mkdir -p "$HOME/.config/opencode"
-  ln -sfn "$HOME/dotfiles/opencode.jsonc" "$HOME/.config/opencode/opencode.jsonc"
+  ln -sfn "$DOTFILES_DIR/opencode.jsonc" "$HOME/.config/opencode/opencode.jsonc"
 
   # fastfetch
   mkdir -p "$HOME/.config/fastfetch"
-  ln -sfn "$HOME/dotfiles/fastfetch.jsonc" "$HOME/.config/fastfetch/config.jsonc"
+  ln -sfn "$DOTFILES_DIR/fastfetch.jsonc" "$HOME/.config/fastfetch/config.jsonc"
 
   # Ghostty
   mkdir -p "$HOME/.config/ghostty"
-  ln -sfn "$HOME/dotfiles/config.ghostty" "$HOME/.config/ghostty/config.ghostty"
-  ln -sfn "$HOME/dotfiles/tabs.css" "$HOME/.config/ghostty/tabs.css"
+  ln -sfn "$DOTFILES_DIR/config.ghostty" "$HOME/.config/ghostty/config.ghostty"
+  ln -sfn "$DOTFILES_DIR/tabs.css" "$HOME/.config/ghostty/tabs.css"
 
   echo "✓ Config files linked"
 }

@@ -152,6 +152,27 @@ install_gh() {
   fi
 }
 
+# Install zsh plugins (autosuggestions + syntax highlighting)
+install_zsh_plugins() {
+  echo "Installing zsh plugins..."
+  PLUGINS_DIR="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins"
+  mkdir -p "$PLUGINS_DIR"
+
+  if [ -d "$PLUGINS_DIR/zsh-autosuggestions/.git" ]; then
+    echo "✓ zsh-autosuggestions already installed"
+  else
+    git clone --depth 1 https://github.com/zsh-users/zsh-autosuggestions "$PLUGINS_DIR/zsh-autosuggestions"
+    echo "✓ zsh-autosuggestions installed"
+  fi
+
+  if [ -d "$PLUGINS_DIR/zsh-syntax-highlighting/.git" ]; then
+    echo "✓ zsh-syntax-highlighting already installed"
+  else
+    git clone --depth 1 https://github.com/zsh-users/zsh-syntax-highlighting "$PLUGINS_DIR/zsh-syntax-highlighting"
+    echo "✓ zsh-syntax-highlighting installed"
+  fi
+}
+
 # Link config files into place
 link_configs() {
   echo "🔗 Linking config files..."
@@ -182,6 +203,7 @@ install_omz
 install_zoxide
 install_fastfetch
 install_gh
+install_zsh_plugins
 link_configs
 
 echo ""

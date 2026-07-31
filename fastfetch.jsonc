@@ -1,0 +1,98 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+
+  "logo": {
+    "type": "auto",
+    "color": {
+      "1": "#ff2a6d",
+      "2": "#05d9e8",
+      "3": "#f8008a",
+      "4": "#d7fc70",
+      "5": "#ff2a6d",
+      "6": "#05d9e8",
+      "7": "#7928ca",
+      "8": "#e0e0e0"
+    },
+    "padding": {
+      "top": 0,
+      "left": 0,
+      "bottom": 0,
+      "right": 4
+    },
+    "printRemaining": true,
+    "preserveAspectRatio": false,
+    "position": "left"
+  },
+
+  "display": {
+    "separator": ": ",
+    "pipe": true,
+    "showErrors": false,
+    "color": {
+      "keys": "#05d9e8",
+      "title": "#ff2a6d",
+      "output": "",
+      "separator": "#7928ca"
+    },
+    "brightColor": true,
+    "bar": {
+      "char": {
+        "elapsed": "■",
+        "total": "-"
+      },
+      "border": {
+        "left": "[ ",
+        "right": " ]"
+      },
+      "color": {
+        "elapsed": "auto",
+        "total": "#7928ca",
+        "border": "#7928ca"
+      },
+      "width": 10
+    }
+  },
+
+  "modules": [
+    {
+      "type": "title",
+      "key": " ",
+      "fqdn": false,
+      "color": {
+        "user": "#ff2a6d",
+        "at": "#05d9e8",
+        "host": "#d7fc70"
+      }
+    },
+    {
+      "type": "separator",
+      "string": "-",
+      "outputColor": "#7928ca"
+    },
+    "os",
+    "host",
+    "kernel",
+    "uptime",
+    "packages",
+    "shell",
+    "display",
+    "de",
+    "wm",
+    "terminal",
+    "cpu",
+    "gpu",
+    "memory",
+    "disk",
+    "localip",
+    "break",
+    {
+      "type": "colors",
+      "key": " ",
+      "symbol": "block",
+      "block": {
+        "width": 3,
+        "range": [0, 15]
+      }
+    }
+  ]
+}

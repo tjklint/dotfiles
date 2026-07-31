@@ -187,6 +187,10 @@ link_configs() {
   mkdir -p "$HOME/.config/opencode"
   ln -sfn "$HOME/dotfiles/opencode.jsonc" "$HOME/.config/opencode/opencode.jsonc"
 
+  # fastfetch
+  mkdir -p "$HOME/.config/fastfetch"
+  ln -sfn "$HOME/dotfiles/fastfetch.jsonc" "$HOME/.config/fastfetch/config.jsonc"
+
   # Ghostty
   mkdir -p "$HOME/.config/ghostty"
   ln -sfn "$HOME/dotfiles/config.ghostty" "$HOME/.config/ghostty/config.ghostty"

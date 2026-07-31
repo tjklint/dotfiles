@@ -18,3 +18,8 @@ gtk-wide-tabs = true
 
 # GTK builds only: compact tab bar, resolved relative to this file's directory.
 gtk-custom-css = tabs.css
+
+# Machine-specific overrides (fonts, sizes, opacity). The ? means this file is
+# optional: create ~/.config/ghostty/local.conf per machine, or it is ignored.
+# Must stay last so local.conf wins over the shared keys above.
+config-file = ?local.conf

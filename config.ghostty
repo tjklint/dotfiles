@@ -12,3 +12,6 @@ window-show-tab-bar = always
 
 # GTK builds only: tabs fill their available space.
 gtk-wide-tabs = true
+
+# GTK builds only: compact tab bar, resolved relative to this file's directory.
+gtk-custom-css = tabs.css

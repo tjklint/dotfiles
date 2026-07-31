@@ -13,7 +13,7 @@ for file in "$ZSH_CONFIG_DIR"/*.zsh; do
   [ -r "$file" ] && source "$file"
 done
 
-macchina
+fastfetch
 
 # zoxide (smart cd) — must be last so all PATH/hook mutations are done.
 eval "$(zoxide init zsh)"

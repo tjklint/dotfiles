@@ -112,20 +112,19 @@ install_zoxide() {
   fi
 }
 
-# Install macchina (if not already installed)
-install_macchina() {
-  if command -v macchina &> /dev/null; then
-    echo "✓ macchina already installed"
+# Install fastfetch (if not already installed)
+install_fastfetch() {
+  if command -v fastfetch &> /dev/null; then
+    echo "✓ fastfetch already installed"
   else
-    echo "Installing macchina..."
-    if [ "$PM" = "pacman" ]; then
-      sudo pacman -S --noconfirm macchina
-    elif [ "$PM" = "brew" ]; then
-      brew install macchina
-    else
-      curl -fsSL https://sh.macchina.cc | sh
-    fi
-    echo "✓ macchina installed"
+    echo "Installing fastfetch..."
+    case "$PM" in
+      pacman) sudo pacman -S --noconfirm fastfetch ;;
+      brew)   brew install fastfetch ;;
+      apt)    sudo apt install -y fastfetch ;;
+      dnf)    sudo dnf install -y fastfetch ;;
+    esac
+    echo "✓ fastfetch installed"
   fi
 }
 
@@ -171,7 +170,7 @@ install_nvm
 install_bun
 install_omz
 install_zoxide
-install_macchina
+install_fastfetch
 install_gh
 link_configs
 

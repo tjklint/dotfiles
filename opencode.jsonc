@@ -1,0 +1,36 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+
+  // Default agent when opencode starts. Forces a plan to exist before any edits.
+  "default_agent": "plan",
+
+  // Default model used by the build agent. Kimi K2.7 via Fireworks.
+  "model": "fireworks-ai/accounts/fireworks/models/kimi-k2p7-code",
+
+  // Small/cheap model for title generation, summaries, and other token-heavy chores.
+  "small_model": "fireworks-ai/accounts/fireworks/models/deepseek-v4-flash",
+
+  // Agent-specific overrides.
+  "agent": {
+    "plan": {
+      // Same strong model for planning and building, routed via Fireworks.
+      "model": "fireworks-ai/accounts/fireworks/models/kimi-k2p7-code",
+      "mode": "primary",
+      "description": "Plans features and architectures before any code is edited."
+    },
+    "build": {
+      "model": "fireworks-ai/accounts/fireworks/models/kimi-k2p7-code",
+      "mode": "primary",
+      "description": "Writes and edits code based on an approved plan."
+    }
+  },
+
+  // Compaction: keep more recent turns intact and reserve headroom so compaction
+  // itself doesn't overflow the context window.
+  "compaction": {
+    "auto": true,
+    "prune": true,
+    "tail_turns": 4,
+    "reserved": 8192
+  }
+}

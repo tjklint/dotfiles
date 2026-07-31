@@ -14,7 +14,7 @@ alias fap="git fetch --all --prune"
 
 # Quick edits
 alias zshrc="code ~/dotfiles/.zshrc"
-alias zshconfig="code ~/dotfiles/zsh-config"
+alias zshconfig="code ~/dotfiles"
 
 # System
 alias reload="source ~/.zshrc"

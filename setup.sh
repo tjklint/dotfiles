@@ -159,6 +159,9 @@ link_configs() {
   # zsh
   ln -sfn "$HOME/dotfiles/.zshrc" "$HOME/.zshrc"
 
+  # git
+  ln -sfn "$HOME/dotfiles/.gitconfig" "$HOME/.gitconfig"
+
   # Ghostty
   mkdir -p "$HOME/.config/ghostty"
   ln -sfn "$HOME/dotfiles/config.ghostty" "$HOME/.config/ghostty/config.ghostty"

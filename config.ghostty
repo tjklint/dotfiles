@@ -1,6 +1,9 @@
 # Ghostty terminal config
 # Shared across machines. Linked into ~/.config/ghostty/config.ghostty by setup.sh.
 
+# Cyberpunk vibes. Swap for Synthwave, Cobalt Neon, Laser, etc.
+theme = Cyberpunk
+
 # Notify when a command finishes, but only when the terminal is unfocused.
 # Long-running commands are the whole reason to glance back at a terminal.
 notify-on-command-finish = unfocused
@@ -15,3 +18,8 @@ gtk-wide-tabs = true
 
 # GTK builds only: compact tab bar, resolved relative to this file's directory.
 gtk-custom-css = tabs.css
+
+# Machine-specific overrides (fonts, sizes, opacity). The ? means this file is
+# optional: create ~/.config/ghostty/local.conf per machine, or it is ignored.
+# Must stay last so local.conf wins over the shared keys above.
+config-file = ?local.conf

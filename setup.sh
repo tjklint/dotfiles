@@ -162,6 +162,10 @@ link_configs() {
   # git
   ln -sfn "$HOME/dotfiles/.gitconfig" "$HOME/.gitconfig"
 
+  # opencode
+  mkdir -p "$HOME/.config/opencode"
+  ln -sfn "$HOME/dotfiles/opencode.jsonc" "$HOME/.config/opencode/opencode.jsonc"
+
   # Ghostty
   mkdir -p "$HOME/.config/ghostty"
   ln -sfn "$HOME/dotfiles/config.ghostty" "$HOME/.config/ghostty/config.ghostty"

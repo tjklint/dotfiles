@@ -1,0 +1,28 @@
+/* Compact Ghostty GTK tab bar. Sizing only, no colors or theming.
+   Loaded via gtk-custom-css in config.ghostty. */
+
+headerbar {
+  min-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+tabbar tabbox {
+  min-height: 28px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+tabbar tabbox tab {
+  min-height: 28px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+tabbar tabbox tab label {
+  font-size: 11px;
+}
